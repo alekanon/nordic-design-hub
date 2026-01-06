@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hej@nordicdigital.dk",
-    href: "mailto:hej@nordicdigital.dk",
+    value: "hej@azulo.dk",
+    href: "mailto:hej@azulo.dk",
   },
   {
     icon: Phone,
@@ -29,7 +29,7 @@ const ContactSection = () => {
           <p className="text-sm text-primary uppercase tracking-widest mb-4">
             Kontakt
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Lad os starte en samtale
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -42,10 +42,10 @@ const ContactSection = () => {
           {contactInfo.map((item) => (
             <div
               key={item.label}
-              className="text-center p-8 bg-muted/30 hover:bg-muted/50 transition-colors duration-300"
+              className="text-center p-8 bg-muted/30 rounded-3xl hover:bg-muted/50 transition-colors duration-300"
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary mx-auto mb-4">
-                <item.icon size={24} />
+              <div className="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary mx-auto mb-4 rounded-2xl">
+                <item.icon size={26} />
               </div>
               <h3 className="font-semibold mb-2">{item.label}</h3>
               {item.href ? (

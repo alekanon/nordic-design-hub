@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/azulo-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,7 @@ const Navigation = () => {
   const navLinks = [
     { href: "#services", label: "Services" },
     { href: "#om-os", label: "Om os" },
+    { href: "#portfolio", label: "Portfolio" },
     { href: "#kontakt", label: "Kontakt" },
   ];
 
@@ -23,8 +25,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="text-lg md:text-xl font-semibold tracking-tight">
-            NORDIC<span className="text-primary">DIGITAL</span>
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="Azulo" className="h-8 md:h-10" />
           </a>
 
           {/* Desktop Navigation */}
@@ -41,7 +43,7 @@ const Navigation = () => {
             <Button
               onClick={() => scrollToSection("#tilbud")}
               size="sm"
-              className="ml-4"
+              className="ml-4 rounded-full"
             >
               Få et tilbud
             </Button>
@@ -73,7 +75,7 @@ const Navigation = () => {
               <Button
                 onClick={() => scrollToSection("#tilbud")}
                 size="sm"
-                className="w-fit mt-2"
+                className="w-fit mt-2 rounded-full"
               >
                 Få et tilbud
               </Button>
