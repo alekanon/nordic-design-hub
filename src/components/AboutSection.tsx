@@ -1,22 +1,22 @@
 const stats = [
-  { number: "50+", label: "Projekter leveret" },
-  { number: "5+", label: "Års erfaring" },
-  { number: "100%", label: "Tilfredse kunder" },
+  { number: "500+", label: "Tilfredse kunder" },
+  { number: "8+", label: "Års erfaring" },
+  { number: "100%", label: "Kundetilfredshed" },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="om-os" className="section-padding">
+    <section id="om-os" className="section-padding bg-navy text-navy-foreground">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-sm text-primary uppercase tracking-widest mb-4">
+            <p className="text-sm text-primary-light uppercase tracking-widest mb-4">
               Om os
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
               Et dansk digitalt bureau med fokus på resultater
             </h2>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-secondary leading-relaxed">
               <p>
                 Vi er et team af passionerede designere og udviklere baseret i 
                 København. Vores mission er at hjælpe danske virksomheder med at 
@@ -38,25 +38,22 @@ const AboutSection = () => {
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-3xl md:text-4xl font-semibold text-primary mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-primary-light mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-secondary">
                     {stat.label}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-muted/50 p-8 border-l-4 border-primary">
-              <blockquote className="text-lg italic mb-4">
-                "Nordic Digital leverede en fantastisk hjemmeside der virkelig 
-                har gjort en forskel for vores forretning. Professionelle og 
-                nemme at arbejde med."
-              </blockquote>
-              <cite className="text-sm text-muted-foreground not-italic">
-                — Maria Jensen, CEO hos TechStart
-              </cite>
+            <div className="rounded-3xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+                alt="Vores team"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
